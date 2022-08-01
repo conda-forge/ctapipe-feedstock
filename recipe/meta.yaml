@@ -58,6 +58,7 @@ requirements:
     - importlib_resources
     - jinja2 =3.0
     - docutils
+    - pyyaml >=5.1
 
 test:
   imports:
