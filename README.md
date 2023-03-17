@@ -1,11 +1,11 @@
-About ctapipe
-=============
+About ctapipe-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ctapipe-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/cta-observatory/ctapipe
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ctapipe-feedstock/blob/main/LICENSE.txt)
 
 Summary: Low-level data processing pipeline software for CTA (the Cherenkov Telescope Array)
 
