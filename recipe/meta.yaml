@@ -54,6 +54,7 @@ requirements:
     - requests
     - docutils
     - pyyaml >=5.1
+    - setuptools_scm
 
 test:
   imports:
