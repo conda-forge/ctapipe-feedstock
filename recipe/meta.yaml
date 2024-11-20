@@ -19,7 +19,6 @@ outputs:
   - name: ctapipe-base
     build:
       script: ${PYTHON} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
-      noarch: python
 
     entry_points:
       - 'ctapipe-info = ctapipe.tools.info:main'
