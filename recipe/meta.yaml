@@ -17,8 +17,8 @@ build:
 outputs:
   # first package, base, only required dependencies
   - name: ctapipe-base
-    script: ${PYTHON} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
     build:
+      script: ${PYTHON} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
       noarch: python
 
     entry_points:
