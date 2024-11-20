@@ -7,13 +7,13 @@ Home: https://github.com/cta-observatory/ctapipe
 
 Package license: BSD-3-Clause
 
-Summary: Low-level data processing pipeline software for CTA (the Cherenkov Telescope Array)
+Summary: Low-level data processing pipeline software for the CTAO (the Cherenkov Telescope Array Observatory)
 
 Development: https://github.com/cta-observatory/ctapipe
 
-Documentation: https://cta-observatory.github.io/ctapipe/
+Documentation: https://ctapipe.readthedocs.io/
 
-Low-level data processing pipeline software for CTA (the Cherenkov Telescope Array)
+Low-level data processing pipeline software for the CTAO (the Cherenkov Telescope Array Observatory)
 
 
 Current build status
@@ -35,6 +35,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-ctapipe-green.svg)](https://anaconda.org/conda-forge/ctapipe) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ctapipe.svg)](https://anaconda.org/conda-forge/ctapipe) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ctapipe.svg)](https://anaconda.org/conda-forge/ctapipe) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ctapipe.svg)](https://anaconda.org/conda-forge/ctapipe) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ctapipe--base-green.svg)](https://anaconda.org/conda-forge/ctapipe-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ctapipe-base.svg)](https://anaconda.org/conda-forge/ctapipe-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ctapipe-base.svg)](https://anaconda.org/conda-forge/ctapipe-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ctapipe-base.svg)](https://anaconda.org/conda-forge/ctapipe-base) |
 
 Installing ctapipe
 ==================
@@ -46,16 +47,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `ctapipe` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `ctapipe, ctapipe-base` can be installed with `conda`:
 
 ```
-conda install ctapipe
+conda install ctapipe ctapipe-base
 ```
 
 or with `mamba`:
 
 ```
-mamba install ctapipe
+mamba install ctapipe ctapipe-base
 ```
 
 It is possible to list all of the versions of `ctapipe` available on your platform with `conda`:
