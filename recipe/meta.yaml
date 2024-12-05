@@ -11,7 +11,7 @@ source:
   sha256: 68d01b32a4f57b06bf0007d76f884f5155e5814a4f62d53eb3709ea467e8899a
 
 build:
-  number: 1
+  number: 0
   noarch: python
 
 outputs:
