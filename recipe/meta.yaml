@@ -1,5 +1,5 @@
 {% set name = "ctapipe" %}
-{% set version = "0.23.0" %}
+{% set version = "0.23.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0f562649f8fbfe46836b8f6267698d17cdfe8a5404e1871c5bd383900a8da4ed
+  sha256: 68d01b32a4f57b06bf0007d76f884f5155e5814a4f62d53eb3709ea467e8899a
 
 build:
   number: 1
@@ -41,7 +41,7 @@ outputs:
         - setuptools_scm >=8.0
       run:
         - python >={{ python_min }}
-        - astropy-base >=5.3,<7.0a0
+        - astropy-base >=5.3,<8.0a0
         - joblib
         - numba >=0.56
         - numpy >=1.23,<3.0.0a0
