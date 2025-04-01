@@ -1,5 +1,5 @@
 {% set name = "ctapipe" %}
-{% set version = "0.23.2" %}
+{% set version = "0.24.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d98472aae06e32a1e8945bc773d53e00d8434e18e9bc1683793b47fdbe85daa5
+  url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: "39193e6eed9f6dcb92f6b28453eaadf3027e312d3edcd677b3610bb6b9b1b368"
 
 build:
   number: 0
@@ -42,19 +42,19 @@ outputs:
       run:
         - python >={{ python_min }}
         - astropy-base >=5.3,<8.0a0
+        - docutils
         - joblib
-        - numba >=0.56
-        - numpy >=1.23,<3.0.0a0
+        - numba >=0.57
+        - numpy >=1.24,<3.0.0a0
+        - packaging
         - psutil
+        - pytables >=3.4,<4.0.0a0
+        - pyyaml >=5.1
+        - requests
         - 'scikit-learn !=1.4.0'
-        - scipy >=1.2
-        - pytables >=3.4
+        - scipy >=1.10,<2.0.0a0
         - tqdm >=4.32
         - traitlets >=5.6,<6
-        - requests
-        - docutils
-        - packaging
-        - pyyaml >=5.1
 
     test:
       imports:
@@ -81,10 +81,11 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage('ctapipe-base', max_pin='x.x.x') }}
-        - matplotlib-base >=3.0,<4.0.0a0
         - bokeh >=3.0,<4.0.0a0
         - eventio >=1.9.1,<2.0.0a0
         - iminuit >=2.0,<3
+        - matplotlib-base >=3.0,<4.0.0a0
+        - pyirf >=0.12.0,<0.13.0a0
     test:
       imports:
         - ctapipe.visualization.bokeh
