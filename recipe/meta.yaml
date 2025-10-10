@@ -1,5 +1,5 @@
 {% set name = "ctapipe" %}
-{% set version = "0.26.0" %}
+{% set version = "0.27.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "bee54a99dc917862330a10ffdee472375147969461324d3abb073633a56e5005"
+  sha256: "8dba2f3a3c71f4bc474e33f1b26cdc4559fda3aeb9c7c5c77277d7a70cce8c3a"
 
 build:
   number: 0
