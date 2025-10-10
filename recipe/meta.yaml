@@ -1,5 +1,5 @@
 {% set name = "ctapipe" %}
-{% set version = "0.26.0" %}
+{% set version = "0.27.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "bee54a99dc917862330a10ffdee472375147969461324d3abb073633a56e5005"
+  sha256: "8dba2f3a3c71f4bc474e33f1b26cdc4559fda3aeb9c7c5c77277d7a70cce8c3a"
 
 build:
   number: 0
@@ -33,6 +33,7 @@ outputs:
       - 'ctapipe-train-particle-classifier = ctapipe.tools.train_particle_classifier:main'
       - 'ctapipe-train-disp-reconstructor = ctapipe.tools.train_disp_reconstructor:main'
       - 'ctapipe-apply-models = ctapipe.tools.apply_models:main'
+      - 'ctapipe-store-astropy-cache = ctapipe.tools.store_astropy_cache:main'
     requirements:
       host:
         - python {{ python_min }}
@@ -67,6 +68,7 @@ outputs:
         - ctapipe.io
       commands:
         - ctapipe-info --version
+        - ctapipe-store-astropy-cache --help
         - pip check
         # make sure we have a version
         - pip freeze | grep ctapipe | grep -v ctapipe==0.0.0
@@ -85,7 +87,7 @@ outputs:
         - eventio >=1.9.1,<2.0.0a0
         - iminuit >=2.0,<3
         - matplotlib-base >=3.0,<4.0.0a0
-        - pyirf >=0.12.0,<0.13.0a0
+        - pyirf >=0.13.0,<0.14.0a0
     test:
       imports:
         - ctapipe.visualization.bokeh
