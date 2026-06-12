@@ -1,5 +1,5 @@
 {% set name = "ctapipe" %}
-{% set version = "0.30.0" %}
+{% set version = "0.31.0" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "5ef9bcbd29af260eb1413c6b4c236bd39ecf18c02dc31e031eca272874ed6fb6"
+  sha256: "1e36144be5478fa5ec66b850724fafffa87ecb36957b4cc5d91400a2da5a387d"
 
 build:
   number: 0
@@ -27,8 +27,11 @@ outputs:
       - 'ctapipe-display-dl1 = ctapipe.tools.display_dl1:main'
       - 'ctapipe-process = ctapipe.tools.process:main'
       - 'ctapipe-merge = ctapipe.tools.merge:main'
+      - 'ctapipe-optimize-event-selection = ctapipe.tools.optimize_event_selection:main'
+      - 'ctapipe-compute-irf = ctapipe.tools.compute_irf:main'
       - 'ctapipe-fileinfo = ctapipe.tools.fileinfo:main'
       - 'ctapipe-quickstart = ctapipe.tools.quickstart:main'
+      - 'ctapipe-calculate-pixel-statistics = ctapipe.tools.calculate_pixel_stats:main'
       - 'ctapipe-train-energy-regressor = ctapipe.tools.train_energy_regressor:main'
       - 'ctapipe-train-particle-classifier = ctapipe.tools.train_particle_classifier:main'
       - 'ctapipe-train-disp-reconstructor = ctapipe.tools.train_disp_reconstructor:main'
@@ -45,6 +48,7 @@ outputs:
         - astropy-base >=6.1,<8.0a0
         - docutils
         - joblib
+        - hist-base
         - numba >=0.58.1
         - numpy >=1.26,<3.0.0a0
         - packaging
