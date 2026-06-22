@@ -11,7 +11,7 @@ source:
   sha256: "1e36144be5478fa5ec66b850724fafffa87ecb36957b4cc5d91400a2da5a387d"
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 outputs:
@@ -45,11 +45,11 @@ outputs:
         - setuptools_scm >=8.0
       run:
         - python >={{ python_min }}
-        - astropy-base >=6.1,<8.0a0
+        - astropy-base >=6.1,<9.0a0
         - docutils
         - joblib
         - hist-base
-        - numba >=0.58.1
+        - numba >=0.59.0
         - numpy >=1.26,<3.0.0a0
         - packaging
         - psutil
@@ -57,9 +57,9 @@ outputs:
         - pyyaml >=5.1
         - requests
         - 'scikit-learn !=1.4.0'
-        - scipy >=1.10,<2.0.0a0
+        - scipy >=1.15,<2.0.0a0
         - tqdm >=4.32
-        - traitlets >=5.6,<6
+        - traitlets >=5.6,<6.0.0a0
 
     test:
       imports:
