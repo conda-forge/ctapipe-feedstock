@@ -48,7 +48,6 @@ outputs:
         - astropy-base >=6.1,<9.0a0
         - docutils
         - joblib
-        - hist-base
         - numba >=0.59.0
         - numpy >=1.26,<3.0.0a0
         - packaging
@@ -92,6 +91,8 @@ outputs:
         - iminuit >=2.0,<3
         - matplotlib-base >=3.0,<4.0.0a0
         - pyirf >=0.14.0,<0.15.0a0
+        - hist-base
+        - zernike
     test:
       imports:
         - ctapipe.visualization.bokeh
