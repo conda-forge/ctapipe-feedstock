@@ -45,6 +45,7 @@ outputs:
         - setuptools_scm >=8.0
       run:
         - python >={{ python_min }}
+        - ctao-datamodel >=1.4,<2.0a0
         - astropy-base >=7.2,<9.0a0
         - docutils
         - joblib
